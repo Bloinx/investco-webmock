@@ -1,1 +1,36 @@
 dev.investco.app
+
+
+
+EL EC2 que se requiere crear sera nuestro servidor principal internamente posee varos contenedores Docker internos y demanda procesos multihilos por eso la necesidad de 4 nucleos como minimo y 8GB de ram son nuestros requisitos minimos, teniendo en cuenta que en ocaciones de demanda necesitaremos ampliar.
+
+sudo timedatectl set-timezone America/Mexico_City
+
+
+[
+{
+"Collection": 
+"patients",
+"Query__JSON_Format_": 
+[
+{
+"$match": 
+{
+"birthday": 
+{
+"$gte": 
+{
+"$date": 
+"1985-05-19T00:00:00Z"
+},
+"$lte": 
+{
+"$date": 
+"2025-05-19T00:00:00Z"
+}
+}
+}
+}
+]
+}
+]
